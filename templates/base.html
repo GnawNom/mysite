@@ -1,14 +1,31 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 <head>
-    <title>{% block title %}{% endblock %}</title>
+
+    <title>{% block title %}Default Title{% endblock %}</title>
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 </head>
 <body>
+<div id="container">
+	<div class="sixteen columns">
     {% block header %}{% endblock %}
+    </div>	
+    
     {% block content %}{% endblock %}
+    
+    <div class="sixteen columns">
     {% block footer %}
     <hr>
     <p>Thanks for visiting my site.</p>
     {% endblock %}
+    </div>
+</div>
 </body>
 </html>
